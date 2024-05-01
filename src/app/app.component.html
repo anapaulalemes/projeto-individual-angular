@@ -1,0 +1,19 @@
+<app-header>
+  <button type="button" mat--icon-button (click)="drawer.toggle()">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
+</app-header>
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <app-mindverse-cart
+      (mindverseAray)="(addMindverseArray)"
+    ></app-mindverse-cart>
+  </mat-drawer>
+
+  <app-mindverse-catalog
+    (addCourseToCart)="addCourseToCart($event)"
+  ></app-mindverse-catalog>
+
+  <router-outlet />
+</mat-drawer-container>

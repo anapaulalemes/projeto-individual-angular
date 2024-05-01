@@ -1,0 +1,10 @@
+<mat-list>
+  @for(course of addMindverseArray; track course.id) {
+  <mat-list-item>
+    {{ course.title }} | {{ course.totalAddedToCart }}
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  } @empty {
+  <mat-list-item>O carrinho está vazio!</mat-list-item>
+  }
+</mat-list>

@@ -1,0 +1,8 @@
+@for(course of mindverseArray; track course.id) {
+<app-mindverse-card
+  [course]="course"
+  (addCourseToCart)="warnAboutAddCourseToCart(course)"
+></app-mindverse-card>
+} @empty { A lista de cursos está vazia!!}
+
+<app-mindverse-card></app-mindverse-card>
