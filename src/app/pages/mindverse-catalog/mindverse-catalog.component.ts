@@ -53,7 +53,7 @@ export class MindverseCatalogComponent implements OnInit {
       id: 4,
       title: 'Inteligência Artificial para Arte Generativa',
       author: 'Ana',
-      img: 'Inteligência Artificial para Arte Generativa',
+      img: 'https://www.hardware.com.br/wp-content/uploads/2023/07/IA-Generativa-scaled.jpeg.png',
       description:
         'Neste curso, os alunos explorariam como a inteligência artificial pode ser usada como uma ferramenta criativa na produção de arte generativa. Eles aprenderiam técnicas de programação e modelagem de dados para criar algoritmos que geram música, arte visual e texto de forma autônoma.',
       publishedDate: new Date('2024-01-05'),
@@ -66,7 +66,7 @@ export class MindverseCatalogComponent implements OnInit {
       id: 5,
       title: 'Tecnologia de Tecidos Inteligentes e Moda Futurista',
       author: 'Ana',
-      img: 'https://www.hardware.com.br/wp-content/uploads/2023/07/IA-Generativa-scaled.jpeg.png',
+      img: 'https://imagenes.20minutos.es/files/image_640_360/uploads/imagenes/2023/12/07/ia-disenadora-de-moda.jpeg',
       description:
         'Este curso combina moda e tecnologia, ensinando aos alunos como integrar componentes eletrônicos em tecidos para criar roupas inteligentes. Eles explorariam sensores, LEDs e outros dispositivos eletrônicos para projetar roupas futuristas que respondem ao ambiente ou interagem com o usuário.',
       publishedDate: new Date('2024-01-05'),
