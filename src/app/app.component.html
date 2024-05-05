@@ -7,7 +7,7 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side">
     <app-mindverse-cart
-      (mindverseAray)="(addMindverseArray)"
+      [mindverseArray]="addMindverseArray"
     ></app-mindverse-cart>
   </mat-drawer>
 
@@ -15,5 +15,7 @@
     (addCourseToCart)="addCourseToCart($event)"
   ></app-mindverse-catalog>
 
-  <router-outlet />
+  <app-mindverse-create />
+
+  <!-- <router-outlet /> -->
 </mat-drawer-container>

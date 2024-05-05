@@ -1,12 +1,16 @@
 @if(course) {
 <mat-card>
-  <mat-card-header>
-    <mat-card-title>{{ course.title }}</mat-card-title>
-    <mat-card-subtitle>{{ course.author }}</mat-card-subtitle>
-  </mat-card-header>
+  <mat-card-title-group>
+    <mat-card-header>
+      <mat-card-title>{{ course.title }}</mat-card-title>
+      <mat-card-subtitle>{{ course.author }}</mat-card-subtitle>
+      <img mat-card-sm-image src="{{ course.img }}" />
+    </mat-card-header>
+  </mat-card-title-group>
   <mat-card-content>
     <p>
       {{ course.description }}
+      ${{ course.price }}
     </p>
   </mat-card-content>
   <mat-card-actions>

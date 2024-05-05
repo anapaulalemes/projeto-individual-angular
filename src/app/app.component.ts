@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { HeaderComponent } from './components/header/header.component';
@@ -6,6 +6,7 @@ import { MindverseCatalogComponent } from './pages/mindverse-catalog/mindverse-c
 import { MindverseCartComponent } from './components/mindverse-cart/mindverse-cart.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ICourse } from './interfaces/course.interface';
+import { MindverseCreateComponent } from './pages/mindverse-create/mindverse-create.component';
 
 @Component({
   selector: 'app-root',
@@ -17,18 +18,29 @@ import { ICourse } from './interfaces/course.interface';
     MindverseCatalogComponent,
     MindverseCartComponent,
     MatIconModule,
+    MindverseCreateComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'mindverse';
   addMindverseArray: ICourse[] = [];
 
+  ngOnInit() {
+    this.addMindverseArray = JSON.parse(
+      localStorage.getItem('addMindverseArray') || '[]'
+    );
+  }
+
   findOrAddCourse(course: ICourse) {
     for (let i = 0; i < this.addMindverseArray.length; i++) {
-      if (course.id === this.addMindverseArray[i].id) {
-        this.addMindverseArray[i].totalAddedToCart++;
+      const currCourse = this.addMindverseArray[i];
+      if (course.id === currCourse.id) {
+        currCourse.totalAddedToCart =
+          course.totalAddedToCart < course.totalInStock
+            ? currCourse.totalAddedToCart + 1
+            : currCourse.totalAddedToCart;
         return;
       }
     }
@@ -41,7 +53,5 @@ export class AppComponent {
     this.findOrAddCourse(course);
 
     this.addMindverseArray = [...this.addMindverseArray];
-
-    console.log(this.addMindverseArray);
   }
 }

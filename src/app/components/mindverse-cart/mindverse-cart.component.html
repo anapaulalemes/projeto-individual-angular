@@ -1,14 +1,23 @@
 @for(course of addMindverseArray; track course.id){
 <mat-list>
   <div style="display: flex; align-items: center">
-    <mat-list-item>{{ course.title }}</mat-list-item>
-    <!-- <button mat-button color="warn" (click)="decrementTotalGameCopies(game)">
+    <mat-list-item
+      >{{ course.title }} || {{ course.totalAddedToCart }}</mat-list-item
+    >
+    <button
+      mat-button
+      color="primary"
+      (click)="incrementTotalCourseCopies(course)"
+    >
+      +
+    </button>
+    <button
+      mat-button
+      color="warn"
+      (click)="decrementTotalCourseCopies(course)"
+    >
       -
     </button>
-    {{ course.totalAddedToCart }}
-    <button mat-button color="primary" (click)="incrementTotalGameCopies(game)">
-      +
-    </button> -->
   </div>
   <mat-divider></mat-divider>
 </mat-list>

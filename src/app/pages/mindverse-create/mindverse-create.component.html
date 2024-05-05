@@ -1,0 +1,139 @@
+<h1>Formulário para cadastro de novo curso:</h1>
+
+<form>
+  <div>
+    <mat-form-field>
+      <mat-label>Título</mat-label>
+      <input matInput name="title" [(ngModel)]="newCourse.title" />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Autor</mat-label>
+      <input matInput name="author" [(ngModel)]="newCourse.author" />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Descrição</mat-label>
+      <textarea
+        matInput
+        name="description"
+        [(ngModel)]="newCourse.description"
+      ></textarea>
+    </mat-form-field>
+    <div>
+      <mat-form-field>
+        <mat-label>Picture URL</mat-label>
+        <textarea matInput name="img" [(ngModel)]="newCourse.img"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Data de lançamento</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        name="publishedDate"
+        [(ngModel)]="newCourse.publishedDate"
+      />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Preço</mat-label>
+      <input
+        matInput
+        type="number"
+        placeholder="0"
+        nome="price"
+        [(ngModel)]="newCourse.price"
+      />
+      <span matTextPrefix>$&nbsp;</span>
+      <span matTextSuffix>.00</span>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Quantidade em estoque</mat-label>
+      <input
+        matInput
+        type="number"
+        placeholder="0"
+        nome="totalInStock"
+        [(ngModel)]="newCourse.totalInStock"
+      />
+    </mat-form-field>
+  </div>
+
+  <button mat-stroked-button color="primary" (click)="submitForm()">
+    Enviar
+  </button>
+</form>
+
+<!-- <form [formGroup]="mindverseForm">
+  <div>
+    <mat-form-field>
+      <mat-label>Título</mat-label>
+      <input matInput formControlName="title" />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Autor</mat-label>
+      <input matInput formControlName="author" />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Descrição</mat-label>
+      <textarea matInput fprmControlName="description"></textarea>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Data de lançamento</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        formControlName="publishedDate"
+      />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Preço</mat-label>
+      <input matInput type="number" placeholder="0" fprmControlName="price" />
+      <span matTextPrefix>$&nbsp;</span>
+      <span matTextSuffix>.00</span>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Quantidade em estoque</mat-label>
+      <input
+        matInput
+        type="number"
+        placeholder="0"
+        formControlName="totalInStock"
+      />
+    </mat-form-field>
+  </div>
+
+  <button mat-stroked-button color="primary" (click)="submitForm()">
+    Enviar
+  </button>
+</form> -->

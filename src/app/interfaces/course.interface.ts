@@ -3,8 +3,9 @@ export interface ICourse {
   title: string;
   author: string;
   description: string;
-  published_date: Date;
+  publishedDate: Date;
   price: number;
+  img: string;
   totalInStock: number;
   totalAddedToCart: number;
 }
