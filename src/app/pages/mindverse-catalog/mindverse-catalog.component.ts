@@ -66,7 +66,7 @@ export class MindverseCatalogComponent implements OnInit {
       id: 5,
       title: 'Tecnologia de Tecidos Inteligentes e Moda Futurista',
       author: 'Ana',
-      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6UUktb8vMXoPgpealEMbw32mPFsKOs8IRRpeLvbIVOQ&s',
+      img: 'https://www.hardware.com.br/wp-content/uploads/2023/07/IA-Generativa-scaled.jpeg.png',
       description:
         'Este curso combina moda e tecnologia, ensinando aos alunos como integrar componentes eletrônicos em tecidos para criar roupas inteligentes. Eles explorariam sensores, LEDs e outros dispositivos eletrônicos para projetar roupas futuristas que respondem ao ambiente ou interagem com o usuário.',
       publishedDate: new Date('2024-01-05'),
